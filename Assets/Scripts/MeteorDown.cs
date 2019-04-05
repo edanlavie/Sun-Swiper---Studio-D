@@ -8,6 +8,7 @@ public class MeteorDown : MonoBehaviour
     private Vector2 targetPosition;
     public float speed;
     public float Yincrement;
+    public GameObject explodePrefab;
 
     void Start()
     {
@@ -21,6 +22,9 @@ public class MeteorDown : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        GameObject a = Instantiate(explodePrefab);
+        a.transform.position = this.transform.position;
+
         if (other.CompareTag("Earth"))
         {
             Destroy(gameObject);

@@ -113,6 +113,8 @@ MonoBehaviour:
   score: 0
   speed: 2
   Yincrement: -1
+  explodePrefab: {fileID: 2196081871494994959, guid: aab287bb86046a74ea55964c2e9a922e,
+    type: 3}
 --- !u!50 &8257785786437406706
 Rigidbody2D:
   serializedVersion: 4
