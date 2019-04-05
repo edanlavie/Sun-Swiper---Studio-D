@@ -9,6 +9,10 @@ public class MeteorDown : MonoBehaviour
     public float speed;
     public float Yincrement;
 
+    void Start()
+    {
+    }
+
     private void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);

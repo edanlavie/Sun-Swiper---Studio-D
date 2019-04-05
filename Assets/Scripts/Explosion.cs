@@ -1,0 +1,23 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Explosion : MonoBehaviour
+{
+    public float duration = 0.2f;
+    // Start is called before the first frame update
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        duration -= Time.deltaTime;
+        // Remove explosion effect after awhile
+        if (duration < 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+}
